@@ -31,8 +31,9 @@ return (
         alignItems: 'center',
 
         }}>
-    <NavButton to="/" label='Home'/>
+    <NavButton to="/" label="Home"/>
     <NavButton to="/login" label="Login"/>
+    <NavButton to="/signup" label="Sign Up" />
         </div>
     </div>
     <div style={{height: "75px"}} />
