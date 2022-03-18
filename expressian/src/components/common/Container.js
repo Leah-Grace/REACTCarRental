@@ -15,6 +15,7 @@ const Container = (props) => {
     flexDirection: 'column',
     alignItems: 'center',
     minHeight: '100vh',
+    width: '100%',
     }
 
     export default Container;
