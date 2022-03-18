@@ -3,28 +3,57 @@ import NewUserForm from './NewUserForm';
 import Container from '../common/Container';
 import LoginForm from './LoginForm';
 import Splash from '../common/Splash';
-import splashImg from '../../assets/Splash.jpg';
+import splashImg from '../../assets/SplashParallel.jpg';
+import axios from 'axios';
+import { apiHostUrl } from '../../config'
 //import RegSplash from "../../assets/RegSplash.jpg";
 
 const Register = (props) => {
-   /* const [newUser, setUser] = useState((
+    const [newUser, setNewUser] = useState({
         email: '',
         password: '',
         fName: '',
         lName: '',
         isMember: false,
         licenseNumber: ''
-    ))
+    })
 
     const updateForm = (field, value) => {
         setNewUser({
-            ..newUser,
+            ...newUser,
             [field]: value
         })
     }
 
-    const onSubmit = () => {};
-*/
+    const onSubmit = () => {
+        alert("Submitted");
+        const data = newUser;
+        data.name = `${data.fName} ${data.lName}`;
+        data.username = data.email;
+
+        // post create user, login, create customer,
+        createUser(data);
+    };
+
+const createUser = async (data) => {
+    try{
+        const res = await axios.post(`${apiHostUrl}/api/auth/signup`, data);
+        console.log(res.data);
+    } catch (err) {
+        console.error(err.message);
+        }
+    }
+
+const login = (data) => {
+
+}
+
+const createCustomer = (data, token) => {
+
+}
+
+
+
 
     return (
     <Container>
@@ -34,7 +63,10 @@ const Register = (props) => {
     }}>
         <h1>Register</h1>
         </ Splash>
-        <NewUserForm />
+        <NewUserForm
+        newUser={newUser}
+        onChange={updateForm}
+        />
         </Container>
     )
 }

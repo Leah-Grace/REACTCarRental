@@ -17,7 +17,7 @@ const Splash = (props) => {
     const style = {
         backgroundSize: "cover",
         backgroundPosition: "bottom center",
-        height: "75vh",
+        height: "100vh",
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
