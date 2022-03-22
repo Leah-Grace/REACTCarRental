@@ -24,47 +24,45 @@ const handleChange = (e) => {
                 required
                 />
 
-             <Input
-                 name="lName"
-                 id="lName"
-                 value={newUser.lName}
-                 placeholder={"Last Name"}
-                 onChange={handleChange}
-                 required
-                 />
+            <Input
+                name="lName"
+                id="lName"
+                value={newUser.lName}
+                placeholder={"Last Name"}
+                onChange={handleChange}
+                required
+                />
             </ InlineInputContainer>
             <InlineInputContainer>
-                        <Input
-                            name="email"
-                            id="email"
-                            value={newUser.email}
-                            placeholder={"Email Address"}
-                            onChange={handleChange}
-                            required
-                            />
+            <Input
+                name="email"
+                id="email"
+                value={newUser.email}
+                placeholder={"Email Address"}
+                onChange={handleChange}
+                required
+                />
             </ InlineInputContainer>
             <InlineInputContainer>
-                                    <Input
-                                        name="password"
-                                        id="password"
-                                        value={newUser.password}
-                                        placeholder={"Password"}
-                                        onChange={handleChange}
-                                        type="password"
-                                        required
-
-                                        />
-                        </ InlineInputContainer>
-                       <InlineInputContainer>
-                                               <Input
-                                                   name="licenseNumber"
-                                                   id="licenseNumber"
-                                                   value={newUser.licenseNumber}
-                                                   placeholder={"License Number"}
-                                                   onChange={handleChange}
-                                                   type="text"
-                                                   />
-                                   </ InlineInputContainer>
+            <Input
+                name="password"
+                id="password"
+                value={newUser.password}
+                placeholder={"Password"}
+                onChange={handleChange}
+                type="password"
+                />
+                </ InlineInputContainer>
+                <InlineInputContainer>
+                <Input
+                    name="licenseNumber"
+                    id="licenseNumber"
+                    value={newUser.licenseNumber}
+                    placeholder={"License Number"}
+                    onChange={handleChange}
+                    type="text"
+                    />
+                </ InlineInputContainer>
                        <Button>Submit</Button>
 
        </Form>

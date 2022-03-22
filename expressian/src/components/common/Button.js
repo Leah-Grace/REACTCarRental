@@ -18,7 +18,6 @@ const Button = (props) => {
       )}
     </button>
   )
-
 }
 
 const styles = {

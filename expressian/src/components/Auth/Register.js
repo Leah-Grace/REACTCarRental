@@ -25,7 +25,7 @@ const Register = (props) => {
         })
     }
 
-    const onSubmit = () => {
+    const onSubmit = (e) => {
         alert("Submitted");
         const data = newUser;
         data.name = `${data.fName} ${data.lName}`;
@@ -66,6 +66,7 @@ const createCustomer = (data, token) => {
         <NewUserForm
         newUser={newUser}
         onChange={updateForm}
+        onSubmit={onSubmit}
         />
         </Container>
     )
