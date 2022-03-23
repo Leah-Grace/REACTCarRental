@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
+import axios from 'axios';
+import {useNavigate} from 'react-router-dom';
 import NewUserForm from './NewUserForm';
 import Container from '../common/Container';
 import LoginForm from './LoginForm';
 import Splash from '../common/Splash';
 import splashImg from '../../assets/SplashParallel.jpg';
-import axios from 'axios';
 import { apiHostUrl } from '../../config'
 //import RegSplash from "../../assets/RegSplash.jpg";
 
@@ -18,6 +19,7 @@ const Register = (props) => {
         licenseNumber: ''
     })
 
+    const navigate = useNavigate();
     const updateForm = (field, value) => {
         setNewUser({
             ...newUser,
@@ -39,16 +41,40 @@ const createUser = async (data) => {
     try{
         const res = await axios.post(`${apiHostUrl}/api/auth/signup`, data);
         console.log(res.data);
+        login(data);
     } catch (err) {
         console.error(err.message);
         }
     }
 
-const login = (data) => {
+const login = async (data) => {
+    try{
+        const res = await axios.post(`${apiHostUrl}/api/auth/signin`, data);
+        //put format is not as popular anymore. Post is for creating, put is for updating one or two fields.
+        console.log(res.data);
 
+    } catch (err) {
+    console.error(err.response.data);
+    }
 }
 
-const createCustomer = (data, token) => {
+const createCustomer = async (data, token) => {
+    try {
+        const res = await axios.post(
+            `${apiHostUrl}/customers`,
+            data,
+            {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            }
+        );
+        console.log(res.data);
+        navigate('/login');
+    } catch (err){
+        console.error(err.response.data);
+    }
+
 
 }
 
