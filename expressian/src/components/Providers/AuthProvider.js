@@ -8,7 +8,7 @@ const AuthProvider = (props) => {
   //useEffect can check for local storage for previously logged in user.
 
   return (
-    <AuthContext.Provider value={[auth, setAuth]}> //auth is an object and setAuth is a function that sets auth
+    <AuthContext.Provider value={[auth, setAuth]}> //auth is an object and setAuth is a function that sets auth - - this is the hook that allows the data to be used by the children
       {props.children}
     </AuthContext.Provider>
   )
