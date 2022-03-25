@@ -3,7 +3,6 @@ import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
 import NewUserForm from './NewUserForm';
 import Container from '../common/Container';
-import LoginForm from './LoginForm';
 import Splash from '../common/Splash';
 import splashImg from '../../assets/SplashParallel.jpg';
 import { apiHostUrl } from '../../config'
