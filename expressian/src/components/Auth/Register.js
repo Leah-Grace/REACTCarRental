@@ -77,13 +77,10 @@ const createCustomer = async (data, token) => {
 
 }
 
-
-
-
     return (
     <Container>
     <Splash image={splashImg} style={{
-    height: '20vh',
+    height: '30vh',
     color: '#F1F1F1'
     }}>
         <h1>Register</h1>
@@ -98,10 +95,3 @@ const createCustomer = async (data, token) => {
 }
 
 export default Register;
-
-
-       // <NewUserForm
-           // newUser={newUser}
-           // onChange={updateForm}
-           // onSubmit={onSubmit}
-      //  />
