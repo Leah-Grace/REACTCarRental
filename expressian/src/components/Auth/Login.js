@@ -8,7 +8,7 @@ import splashImg from '../../assets/SplashParallel.jpg';
 import { apiHostUrl } from '../../config';
 import {AuthContext} from '../Providers/AuthProvider'
 
-//import login gtom Register???
+
 
 const Login = (props) => {
 
@@ -16,7 +16,6 @@ const [newLogin, setNewLogin] = useState({
     email: '',
     password: ''
 });
-//Local storage can be used in useState
 
 const [auth, setAuth] = useContext(AuthContext);
 const navigate = useNavigate();

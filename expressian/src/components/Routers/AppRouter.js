@@ -4,7 +4,6 @@ import Home from '../Home/Home';
 import Navbar from "../Navbar/Navbar";
 import Register from "../Auth/Register";
 import Login from "../Auth/Login";
-//import components to show
 
 const AppRouter = () => {
     return (

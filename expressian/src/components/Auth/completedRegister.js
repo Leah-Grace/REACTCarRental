@@ -17,7 +17,7 @@ const Register = () => {
     lname: "",
   });
 
-  // submitting context
+  /* submitting context */
 
   const [auth, setAuth] = useContext(AuthContext)
 
@@ -39,7 +39,7 @@ const Register = () => {
     data.cohort = parseInt(query.cohort);
     try {
       const res = await axios.post(`${host}/api/auth/signup`, data)
-      // alert(res.data.message);
+      /* alert(res.data.message); */
       login(data);
     } catch (err) {
       alert (err.response.data.message);
@@ -52,7 +52,7 @@ const Register = () => {
         `${host}/api/auth/signin`, 
         data
       )
-      // alert(res.data.token);
+      /* alert(res.data.token); */
       createDeveloper(data, res.data.token);
     } catch (err) {
       alert (err.response.data.message);
